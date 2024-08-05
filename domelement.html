@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Changer</title>
+</head>
+<body>
+
+    <br><br>
+
+    <h1>DOM element changing</h1>
+    <div id="namechanging">Selected List</div>
+
+    <script>
+
+        const val = document.getElementById("namechanging");
+        const names=["JOHN","BOB","WILLIAMS","ROGER","SYMONDS","JACK","SALT","BUTTLER"]
+        let index=0;
+        
+
+        setInterval(() => {val.textContent = names[index];
+            index = (index + 1) % names.length;}, 2000);
+    </script>
+</body>
+</html>
